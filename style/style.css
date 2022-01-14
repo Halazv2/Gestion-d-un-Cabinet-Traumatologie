@@ -303,8 +303,8 @@ button {
 }
 .quote {
   position: absolute;
-  top: 50%;
-  transform: translate(11%, 11%);
+  top: 40%;
+  left: 5%;
 }
 .actualites{
   padding: 0 98px 30px;
