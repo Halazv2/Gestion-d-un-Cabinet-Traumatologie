@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-primary: #393838;
+    --color-secondary: #27a2c1;
+    --color-tertiary: #4daec7;
+    --color-quaternary: #1d75b9;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+.logo img{
+    width: 60%;
+}
+
+.nav-logout{
+    width: 100px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.nav-logout img{
+    width: 20px;
+    height: 20px;
+    
+}
+
+.main{
+    padding: 0 10% 0 10%;
+}
+
+.hello-text{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 3% 0 3% 0;
+}
+
+.add-patient input{
+    width: 351px;
+    height: 31px;
+    border: 1px solid #EEEEEE;
+    border-style: solid;
+    border-radius: 7px;
+}
+
+.add-patient p{
+    border-bottom: 2px solid black;
+    width: max-content;
+    padding-bottom: 4px;
+}
+
+.input-patient{
+    background: #D4ECF3;
+    height: auto;
+    margin-top: 5%;
+}
+
+.input-group1{
+    display: flex;
+    padding: 4% 2% 2% 2%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-group2{
+    display: flex;
+    padding: 2% 2% 2% 2%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-group3{
+    display: flex;
+    padding: 2% 2% ;
+    justify-content: space-around;
+}
+
+.input-group3 .inputClass3{
+    width: 50%;
+}
+.inputClass{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn1 button{
+    background-color: #27a2c1;
+    color: white;
+    width: 152px;
+    height: 46px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.arr-patients{
+    width: 100%;
+    height: auto;
+}
+.table{
+    margin-top: 50px;
+}
+
+.ajouter-patient{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-patient{
+    display: none;
+}
+
+
+.add .add-patient{
+    display: block;
+}
