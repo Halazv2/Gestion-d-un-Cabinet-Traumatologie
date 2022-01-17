@@ -27,7 +27,7 @@ body {
 }
 .left-side {
   /* border: 2px solid black; */
-  margin-top: auto;
+  margin-top: 8%;
   margin-bottom: auto;
   margin-left: auto;
   display: flex;
