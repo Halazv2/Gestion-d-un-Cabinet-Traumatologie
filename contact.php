@@ -45,10 +45,10 @@
             </div>
             <div class="nav-links">
                 <ul>
-                    <li> <a href="index.html">Home</a> </li>
-                    <li><a href="a_propos.html">À PROPOS</a></li>
-                    <li><a href="dashboard.html">dashbord</a></li>
-                    <li><a href="contact.html"><b>Contact</b></a></li>
+                    <li> <a href="index.php">Home</a></li>
+                    <li><a href="a_propos.php">À PROPOS</a></li>
+                    <li><a href="dashboard.php">dashbord</a></li>
+                    <li><a href="contact.php"><b>Contact</b></a></li>
                 </ul>
             </div>
         </nav>

@@ -28,7 +28,7 @@
       </div>
     </div>
     <nav>
-      <a class="logo" href="index.html"><img src="./image/logo.png" /></a>
+      <a class="logo" href="index.php"><img src="./image/logo.png" /></a>
       <div class="toggle">
         <div class="ouvre">
           <i class="fa-solid fa-bars"></i>
@@ -40,11 +40,11 @@
       <div class="nav-links">
         <ul>
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
-          <li><a href="./a_propos.html"><b>À PROPOS</b></a></li>
-          <li><a href="./login.html">Dashboard</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="./a_propos.php"><b>À PROPOS</b></a></li>
+          <li><a href="./login.php">Dashboard</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </div>
     </nav>

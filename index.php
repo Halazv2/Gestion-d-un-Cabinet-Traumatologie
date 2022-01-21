@@ -47,10 +47,10 @@
           </div>
           <div class="nav-links">
             <ul>
-              <li> <a href="index.html"><b>Home</b></a> </li>
-              <li><a href="a_propos.html">À PROPOS</a></li>
-              <li><a href="dashboard.html">dashbord</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li> <a href="index.php"><b>Home</b></a> </li>
+              <li><a href="a_propos.php">À PROPOS</a></li>
+              <li><a href="login.php">dashbord</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -60,7 +60,8 @@
             <p>cabinet de chirugie TRAUMATOLOGIQUE à SAFI</p>
             <div class="hero-container-buttons">
               <!-- <button class="leftButton">À propose</button> -->
-              <button class="leftButton">Contact</button>
+              <a href="./contact.html"><button class="leftButton">Contact</button></a>
+              
             </div>
           </div>
         </div>
