@@ -1,3 +1,5 @@
+<?php include('./php/Connection.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +7,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./style/dashboard.css" />
+  <title>cabinet doctor rahmani</title>
+  <!-- <link rel="stylesheet" href="./style/dashboard.css" /> -->
+  <link rel="stylesheet" href="./style/dashboard.css?v=<?php echo time(); ?>">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -79,59 +82,48 @@
           </div>
         </div>
       </div>
+      <?php if (isset($_SESSION['message'])) : ?>
+        <div class="msg">
+          <?php
+          echo $_SESSION['message'];
+          unset($_SESSION['message']);
+          ?>
+        </div>
+      <?php endif ?>
       <div class="arr-patients">
+        <?php $results = mysqli_query($con, "SELECT * FROM patients"); ?>
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Full Name</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prenom</th>
               <th scope="col">Telephone</th>
+              <th scope="col">Email</th>
               <th scope="col">Maladie</th>
               <th scope="col">Date de la visite</th>
-              <th scope="col">Edit / Delete</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
-          <tbody>
+          <?php while ($row = mysqli_fetch_array($results)) { ?>
             <tr>
-              <td>Amine SALAMI</td>
-              <td>+212650809899</td>
-              <td>rhumatisme</td>
-              <td>16-06-2019</td>
+              <td><?php echo $row['nom']; ?></td>
+              <td><?php echo $row['prenom']; ?></td>
+              <td><?php echo $row['Num_Tel']; ?></td>
+              <td><?php echo $row['Email']; ?></td>
+              <td><?php echo $row['maladie']; ?></td>
+              <td><?php echo $row['date_naissance']; ?></td>
               <td>
-                <button class="btn btn-warning"><b>Edit</b></button>
-                <button class="btn btn-danger"><b>Delete</b></button>
+              <a href="update.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >
+                <button class="edit_btn">Edit</button>
+              </a>
+              </td>
+              <td>
+              <a href="delete.php?del=<?php echo $row['id']; ?>" >
+                <button class="del_btn">Delete</button>
+                </a>
               </td>
             </tr>
-            <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>
-                <button class="btn btn-warning"><b>Edit</b></button>
-                <button class="btn btn-danger"><b>Delete</b></button>
-              </td>
-            </tr>
-            <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>
-                <button class="btn btn-warning"><b>Edit</b></button>
-                <button class="btn btn-danger"><b>Delete</b></button>
-              </td>
-            </tr>
-            <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>
-                <button class="btn btn-warning"><b>Edit</b></button>
-                <button class="btn btn-danger"><b>Delete</b></button>
-              </td>
-            </tr>
-          </tbody>
+          <?php } ?>
         </table>
       </div>
     </form>

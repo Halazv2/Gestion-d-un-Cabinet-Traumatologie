@@ -15,10 +15,13 @@ if(isset($_POST['add_submit']))
     $result = mysqli_query($con,$query);
     if($result)
     {
-        echo "<script> alert('L'ajoute est bien effectuer.') </script> ";
+        // echo "<script> alert('L'ajoute est bien effectuer.') </script> ";
+		$_SESSION['message'] = "Address saved"; 
+        header("location:../dashboard.php");
     }
 	else
     {
+        header("location:../dashboard.php");
         echo "<script> alert('error') </script>";
     }
 }

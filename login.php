@@ -28,11 +28,11 @@
       <div class="nav-links">
         <ul style="margin-bottom: 0;">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
-          <li><a href="./a_propos.html">À PROPOS</a></li>
-          <li><a href="gallerie.html"><b>Dashboard</b></a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="./a_propos.php">À PROPOS</a></li>
+          <li><a href="gallerie.php"><b>Dashboard</b></a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </div>
     </nav>

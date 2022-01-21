@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style/style.css">
+  <!-- <link rel="stylesheet" href="./style/style.css"> -->
   <link rel="stylesheet" href="./style/footer.css">
+  <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
+
   <!-- <link rel="stylesheet" href="/style/contact.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,12 +115,12 @@
     </div>
     <div class="photos-section">
       <div class="equipe-image-box">
-        <img src="/images/dr.jpg" alt="dr rahbani">
-        <img src="/images/dr2.jpg" alt="equipe dr REHBANI">
+        <img src="./images/dr.jpg" alt="dr rahbani">
+        <img src="./images/dr2.jpg" alt="equipe dr REHBANI">
       </div>
       <div class="equipe-image-box">
-        <img src="/images/Cabinet-4.jpg" alt="cabinet dr REHBANI">
-        <img src="/images/cabinet-3.jpg" alt="cabinet dr REHBANI">
+        <img src="./images/Cabinet-4.jpg" alt="cabinet dr REHBANI">
+        <img src="./images/cabinet-3.jpg" alt="cabinet dr REHBANI">
       </div>
     </div>
 
@@ -135,23 +137,23 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="/images/hanche.png" alt="chirugie hanche">
+            <img src="./images/hanche.png" alt="chirugie hanche">
             <p>Chiruguie hanche</p>
           </div>
           <div class="swiper-slide">
-            <img src="/images/coude.png" alt="chirugie coude">
+            <img src="./images/coude.png" alt="chirugie coude">
             <p>Chiruguie coude</p>
           </div>
           <div class="swiper-slide">
-            <img src="/images/epaule.png" alt="chirugie epaule">
+            <img src="./images/epaule.png" alt="chirugie epaule">
             <p>Chiruguie épaule</p>
           </div>
           <div class="swiper-slide">
-            <img src="/images/cheville.png" alt="chirugie cheville">
+            <img src="./images/cheville.png" alt="chirugie cheville">
             <p>Chiruguie cheville</p>
           </div>
           <div class="swiper-slide">
-            <img src="/images/genou.png" alt="chirugie genou">
+            <img src="./images/genou.png" alt="chirugie genou">
             <p>Chiruguie genou</p>
           </div>
         </div>
@@ -171,19 +173,19 @@
     <h3>Actualités</h3>
     <div class="actualites-cards">
       <div class="card">
-        <img src="/images/Actualités1.png" alt="Actualites">
+        <img src="./images/Actualités1.png" alt="Actualites">
         <h5>Conseils pour mieux se rétablir après une opération du genou </h5>
         <p>Le rétablissement d’une chirurgie est la partie finale et la plus importante</p>
         <a href="#">VOIR PLUS</a>
       </div>
       <div class="card" style="padding-left: 35px;">
-        <img src="/images/Actualités2.png" alt="Actualites">
+        <img src="./images/Actualités2.png" alt="Actualites">
         <h5>La cheville et les douleurs</h5>
         <p>Les chevilles supportent tout le poids du corps lorsque nous marchons, sommes</p>
         <a href="#">VOIR PLUS</a>
       </div>
       <div class="card">
-        <img src="/images/Actualités3.png" alt="Actualites">
+        <img src="./images/Actualités3.png" alt="Actualites">
         <h5>Tout savoir sur la chirurgie de l’épaule</h5>
         <p>La chirurgie de l'épaule est devenue une spécialité à part entière au sein de</p>
         <a href="#">VOIR PLUS</a>

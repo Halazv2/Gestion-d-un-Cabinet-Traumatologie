@@ -137,9 +137,9 @@ nav {
     margin-top: 50px;
 }
 
-.icons{
+/* .icons{
     border: 2px solid black;
-}
+} */
 .icons .close{
     display: none;  
 }
@@ -158,7 +158,34 @@ nav {
 }
 
 
+.edit_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 3px;
+    border: none;
 
+}
+
+.del_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    background: #ff0000;
+}
+.msg {
+    margin: 30px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    width: 50%;
+    text-align: center;
+}
 
 
 @media (max-width: 797px){

@@ -294,7 +294,7 @@ button {
       rgb(29, 117, 185, 68%),
       rgb(29, 117, 185, 68%)
     ),
-    url("images/Rectangle\ 31.png");
+    url("../images/Rectangle\ 31.png");
   height: 40vh;
   background-size: cover;
   color: white;
@@ -302,25 +302,23 @@ button {
   position: relative;
 }
 
-  .quote {
-    position: absolute;
-    top: 25%;
-    left: 4%;
-    width: 90%;
+.quote {
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  width: 100%;
+}
 
-  }
-
-.actualites{
+.actualites {
   padding: 0 20px 0 20px;
 }
-.actualites h3{
+.actualites h3 {
   font-size: 33px;
-  margin:20px 0 20px ;
+  margin: 20px 0 20px;
 }
 .actualites-cards {
   display: flex;
   /* gap: 0px; */
-
 }
 .card h5 {
   font-size: 15px;
@@ -462,7 +460,3 @@ button {
     height: 100%;
   }
 }
-
-
-
-
