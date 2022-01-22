@@ -62,7 +62,7 @@
             <p>cabinet de chirugie TRAUMATOLOGIQUE à SAFI</p>
             <div class="hero-container-buttons">
               <!-- <button class="leftButton">À propose</button> -->
-              <a href="./contact.html"><button class="leftButton">Contact</button></a>
+              <a href="contact.php"><button class="leftButton">Contact</button></a>
               
             </div>
           </div>

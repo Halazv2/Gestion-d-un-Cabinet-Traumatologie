@@ -1,5 +1,5 @@
 <?php 
-include('./connection.php');
+include('connection.php');
 
 
 //add_patients
@@ -7,8 +7,8 @@ if(isset($_POST['message_submit']))
 {
     $FullName=$_POST['text'];
     $Email=$_POST['mail'];
-    // $Message=$_POST['message'];
-    $Message = trim($_POST['message']);
+    $Message=$_POST['message'];
+    // $Message = trim($_POST['message']);
     $query="insert into contact (full_name,email,message)  values ('$FullName','$Email','$Message')";
     $result = mysqli_query($con,$query);
     if($result)

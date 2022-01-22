@@ -1,4 +1,5 @@
 <?php include('./php/connection.php'); ?>
+<?php include('./php/message.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,6 +100,7 @@
       </div>
 
       <div class="arr-patients">
+      <h3>Patients List :</h3>
         <?php $results = mysqli_query($con, "SELECT * FROM patients"); ?>
         <table class="table">
           <thead>
@@ -130,6 +132,27 @@
                   Delete
                 </a>
               </td>
+            </tr>
+          <?php } ?>
+        </table>
+
+
+        
+        <?php $result = mysqli_query($con, "SELECT * FROM contact"); ?>
+        <h3> <br><br><br> Boite Mail:</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nom et Prenom</th>
+              <th scope="col">Mail address</th>
+              <th scope="col">Message</th>
+            </tr>
+          </thead>
+          <?php while ($row = mysqli_fetch_array($result)) { ?>
+            <tr>
+              <td><?php echo $row['full_name']; ?></td>
+              <td><?php echo $row['email']; ?></td>
+              <td><?php echo $row['message']; ?></td>
             </tr>
           <?php } ?>
         </table>

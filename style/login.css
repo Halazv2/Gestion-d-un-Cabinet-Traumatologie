@@ -103,7 +103,8 @@
     height: 60vh;
     padding: 0px 30px 0px 30px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     background-color: #fff;
     margin: 5% 35% 10% 35%;
     border-radius: 15px;

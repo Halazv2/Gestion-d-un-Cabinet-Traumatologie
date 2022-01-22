@@ -16,6 +16,8 @@ if (isset($_POST['login_submit'])) {
 
             header("location:../login.php");
             //send user back to the login page.
+            $_SESSION['message'] = "Username or password is incorrect"; 
+            $_SESSION['msg_type'] = "danger"; 
         }
     }
 }

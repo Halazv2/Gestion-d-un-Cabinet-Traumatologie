@@ -40,9 +40,19 @@
   </div>
   <div class="background">
     <div class="login-input">
+      <?php
+        if (isset($_SESSION['message'])) : ?>
+          <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
+            <?php
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+            ?>
+          </div>
+        <?php endif ?>
+      
       <form style="width: 100%;" method="post" action="./php/authentification.php">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">UserName</label>
+          <label for="exampleInputEmail1" class="form-label">Username</label>
           <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="UserName">
           <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
         </div>

@@ -64,7 +64,7 @@ include('./php/connection.php');
         <form action="./php/message.php" class="left-side" method="post">
             <input type="text" name="text" placeholder="Full Name">
             <input type="email" name="mail" placeholder="Email">
-            <input type="text"  name="Message"  placeholder="Message"></input>
+            <input type="text"  name="message"  placeholder="Message"></input>
             <button class="leftButton" name="message_submit">ENVOYER</button>
         </form>
         <div class="rght-side">
