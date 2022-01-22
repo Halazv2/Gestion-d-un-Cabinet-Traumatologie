@@ -8,6 +8,8 @@
   <!-- <link rel="stylesheet" href="./style/style.css"> -->
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
+
+  <!-- <link rel="stylesheet" href="/style/contact.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
 <body>
   <header>
     <div class="header-nav">
-      <div class="header-top">
+      <!-- <div class="header-top">
         <div class="phone">
           <i class="fas fa-phone-alt"></i>
           <p>Appelez-nous : 08 08 08 08 08 08 | 06 29 10 39 40</p>
@@ -33,7 +35,7 @@
             <li><i class="fab fa-instagram"></i></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="header-bottom">
         <nav>
           <a class="logo" href="index.html"><img src="images/logo.png"></a>
@@ -114,11 +116,11 @@
     <div class="photos-section">
       <div class="equipe-image-box">
         <img src="./images/dr.jpg" alt="dr rahbani">
-        <img src="./images/dr2.jpg" alt="equipe dr REHBANI">
+        <img src="./images/23.jpg" alt="equipe dr REHBANI">
       </div>
       <div class="equipe-image-box">
-        <img src="./images/Cabinet-4.jpg" alt="cabinet dr REHBANI">
-        <img src="./images/cabinet-3.jpg" alt="cabinet dr REHBANI">
+        <img src="./images/24.jpg" alt="cabinet dr REHBANI">
+        <img src="./images/22.jpg " alt="cabinet dr REHBANI">
       </div>
     </div>
 
@@ -176,7 +178,7 @@
         <p>Le rétablissement d’une chirurgie est la partie finale et la plus importante</p>
         <a href="#">VOIR PLUS</a>
       </div>
-      <div class="card">
+      <div class="card" style="padding-left: 35px;">
         <img src="./images/Actualités2.png" alt="Actualites">
         <h5>La cheville et les douleurs</h5>
         <p>Les chevilles supportent tout le poids du corps lorsque nous marchons, sommes</p>
@@ -263,8 +265,8 @@
       },
     });
   </script> 
-  <script src="./js/navbar.js"></script>
   <script src="https://kit.fontawesome.com/3d49ef96c0.js" crossorigin="anonymous"></script>
+  <script src="/js/navbar.js"></script>
 </body>
 
 </html>

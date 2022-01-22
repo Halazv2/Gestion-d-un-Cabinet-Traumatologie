@@ -14,7 +14,7 @@
 
 <body>
   <div class="header">
-    <div class="header-top">
+    <!-- <div class="header-top">
       <div class="phone">
         <i class="fas fa-phone-alt"></i>
         <p>Appelez-nous : 08 08 08 08 08 08 | 06 29 10 39 40</p>
@@ -26,7 +26,7 @@
           <li><i class="fab fa-instagram"></i></li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <nav>
       <a class="logo" href="index.php"><img src="./image/logo.png" /></a>
       <div class="toggle">
@@ -58,7 +58,7 @@
           <h2>chirurgien orthopédiste <br>traumatologue a Marrakech</h2>
           <p>Médecin chevronné avec plus d’une vingtaine d’années d’expérience en tant que Chef du service d’Orthopédie
             au CHU Mohammed IV de Marrakech mais aussi en tant que chirurgien des Hôpitaux de Paris et de Grenoble.</p>
-          <img src="./image/Saidi-et-equipe.jpg" alt="">
+          <img src="./images/23.jpg" alt="">
         </div>
         <div class="part2">
           <h4 style="color: #27A2C1;padding-top: 4%;">PARCOURS</h4>

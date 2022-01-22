@@ -1,3 +1,7 @@
+<?php
+include('./php/connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/footer.css">
-    <link rel="stylesheet" href="./style/contact.css">
+    <link rel="stylesheet" href="./style/contact.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +23,7 @@
 </head>
 
 <body>
-    <div class="header-top">
+    <!-- <div class="header-top">
         <div class="phone">
             <i class="fas fa-phone-alt"></i>
             <p>Appelez-nous : 08 08 08 08 08 08 | 06 29 10 39 40</p>
@@ -31,7 +35,7 @@
                 <li><i class="fab fa-instagram"></i></li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <div class="header-bottom">
         <nav>
             <a class="logo" href="index.html"><img src="images/logo.png"></a>
@@ -57,16 +61,14 @@
         <h3>Contact Us</h3>
     </div>
     <div class="bg-container">
-        <form action="" class="left-side">
+        <form action="./php/message.php" class="left-side" method="post">
             <input type="text" name="text" placeholder="Full Name">
-            <input type="text" name="mail" placeholder="Email">
-            <textarea name="Message" form="usrform" placeholder="Message"></textarea>
-            <button class="leftButton">ENVOYER</button>
+            <input type="email" name="mail" placeholder="Email">
+            <input type="text"  name="Message"  placeholder="Message"></input>
+            <button class="leftButton" name="message_submit">ENVOYER</button>
         </form>
         <div class="rght-side">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1201.0755326104013!2d-9.23490970392838!3d32.29267017429246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac211719897669%3A0x6f59fa5bb517f58a!2sYoucode%20Safi!5e0!3m2!1sen!2sma!4v1642103269118!5m2!1sen!2sma"
-                width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1201.0755326104013!2d-9.23490970392838!3d32.29267017429246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac211719897669%3A0x6f59fa5bb517f58a!2sYoucode%20Safi!5e0!3m2!1sen!2sma!4v1642103269118!5m2!1sen!2sma" width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
             <br>
             <div class="right-side-text">
@@ -151,7 +153,7 @@
             </div>
         </div>
     </footer>
-    <script src="./js/navbar.js"></script>
+    <script src="/js/navbar.js"></script>
 </body>
 
 </html>
