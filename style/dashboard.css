@@ -1,122 +1,136 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 :root {
-    --color-primary: #393838;
-    --color-secondary: #27a2c1;
-    --color-tertiary: #4daec7;
-    --color-quaternary: #1d75b9;
+  --color-primary: #393838;
+  --color-secondary: #27a2c1;
+  --color-tertiary: #4daec7;
+  --color-quaternary: #1d75b9;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
-    padding: 0 5%;
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  padding: 0 5%;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(212 236 243);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+.nav-links ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+.logo img {
+  width: 60%;
 }
 
-.logo img{
-    width: 60%;
+.nav-logout {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.nav-logout{
-    width: 100px;
-    display: flex;
-    justify-content: space-around; 
+.nav-logout img {
+  width: 20px;
+  height: 20px;
 }
 
-.nav-logout img{
-    width: 20px;
-    height: 20px;
-    
+.main {
+  padding: 0 10% 0 10%;
 }
 
-.main{
-    padding: 0 10% 0 10%;
+.hello-text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 3% 0 3% 0;
 }
 
-.hello-text{
-    text-align: center;
-    font-size: 28px;
-    font-weight: 600;
-    padding: 3% 0 3% 0;
+.ajouter-patient {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.ajouter-patient{
-    display: flex;
-    justify-content: flex-end;
+.add-patient {
+  display: none;
 }
 
-.add-patient{
-    display: none;
+.add .add-patient {
+  display: block;
 }
 
-
-.add .add-patient{
-    display: block;
+.add-patient input {
+  width: 351px;
+  height: 31px;
+  border: 1px solid #eeeeee;
+  border-style: solid;
+  border-radius: 7px;
 }
 
-.add-patient input{
-    width: 351px;
-    height: 31px;
-    border: 1px solid #EEEEEE;
-    border-style: solid;
-    border-radius: 7px;
+.add-patient p {
+  border-bottom: 2px solid black;
+  width: max-content;
+  padding-bottom: 4px;
 }
 
-.add-patient p{
-    border-bottom: 2px solid black;
-    width: max-content;
-    padding-bottom: 4px;
+.input-patient {
+  background: #d4ecf3;
+  height: auto;
+  margin-top: 5%;
 }
 
-.input-patient{
-    background: #D4ECF3;
-    height: auto;
-    margin-top: 5%;
+.input-group1 {
+  display: flex;
+  padding: 4% 2% 2% 2%;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.input-group1{
-    display: flex;
-    padding: 4% 2% 2% 2%;
-    align-items: center;
-    justify-content: space-around;
+.input-group2 {
+  display: flex;
+  padding: 2% 2% 2% 2%;
+  align-items: center;
+  justify-content: space-around;
+}
+.input-group4 {
+  display: flex;
+  padding: 2% 2% 2% 2%;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.input-group2{
-    display: flex;
-    padding: 2% 2% 2% 2%;
-    align-items: center;
-    justify-content: space-around;
+.input-group3 {
+  display: flex;
+  padding: 2% 2%;
+  justify-content: flex-end;
 }
 
-.input-group3{
-    display: flex;
-    padding: 2% 2% ;
-    justify-content: space-around;
+.input-group3 .inputClass3 {
+  width: 50%;
 }
-
-.input-group3 .inputClass3{
-    width: 50%;
-}
-.inputClass{
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.inputClass {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* .btn1 button{
@@ -129,86 +143,69 @@ nav {
     font-size: 18px;
 } */
 
-.arr-patients{
-    width: 100%;
-    height: auto;
+.arr-patients {
+  width: 100%;
+  height: auto;
 }
-.table{
-    margin-top: 50px;
+.table {
+  margin-top: 50px;
 }
 
 /* .icons{
     border: 2px solid black;
 } */
-.icons .close{
-    display: none;  
+.icons .close {
+  display: none;
 }
-.icons .open{
-    font-size: 24px; 
-    padding:0 8px 0 8px;
+.icons .open {
+  font-size: 24px;
+  padding: 0 8px 0 8px;
 }
-.add .open{
-    display: none;
-}
-
-.add .close{
-    display: block;
-    font-size: 24px; 
-    padding:0 8px 0 8px;
+.add .open {
+  display: none;
 }
 
-
-.edit_btn {
-    text-decoration: none;
-    padding: 2px 5px;
-    background: #0d6efd;
-    color: white;
-    border-radius: 3px;
-    border: none;
-
-}
-
-.del_btn {
-    text-decoration: none;
-    padding: 2px 5px;
-    color: white;
-    border-radius: 3px;
-    border: none;
-    background: #ff0000;
+.add .close {
+  display: block;
+  font-size: 24px;
+  padding: 0 8px 0 8px;
 }
 .msg {
-    margin: 30px auto; 
-    padding: 10px; 
-    border-radius: 5px; 
-    color: #3c763d; 
-    background: #dff0d8; 
-    border: 1px solid #3c763d;
-    width: 50%;
-    text-align: center;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 5px;
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  width: 50%;
+  text-align: center;
+}
+.profile-image img {
+  display: inline-block;
+  position: relative;
+  width: 550px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
-
-@media (max-width: 797px){
-    .btn{
-        margin-top: 10px;
-    }
+@media (max-width: 797px) {
+  .btn {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 376px) {
-    .hello-text {
-        font-size: 21px;
-        padding: 7% 0 3% 0;
-    }
+  .hello-text {
+    font-size: 21px;
+    padding: 7% 0 3% 0;
+  }
 
-    .add-patient{
-        display: none;
-    }
+  .add-patient {
+    display: none;
+  }
 
-    .main{
-        padding: 0 20px 0 13px;
-    }
-
+  .main {
+    padding: 0 20px 0 13px;
+  }
 }
-
-
-

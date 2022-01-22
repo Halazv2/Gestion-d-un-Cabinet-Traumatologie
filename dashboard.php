@@ -1,5 +1,4 @@
-<?php include('./php/Connection.php'); ?>
-
+<?php include('./php/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,12 +14,19 @@
 </head>
 
 <body>
+  <?php require_once './php/add.php'; ?>
   <div class="header">
     <nav>
       <a class="logo" href="index.php"><img src="./image/logo.png" /></a>
+      <div class="nav-links">
+        <ul>
+          <li> <i class="fas fa-user"></i>
+            <a href="profile.php"><b>Profile</b></a>
+          </li>
+        </ul>
+      </div>
       <div class="nav-logout">
         <a href="./login.php"><img src="./image/Vector logout.png" alt="" /></a>
-
         <p>Log out</p>
       </div>
     </nav>
@@ -30,6 +36,15 @@
     <div class="hello-text">
       <p>Bonjour Mr rafik rahbani</p>
     </div>
+    <?php
+    if (isset($_SESSION['message'])) : ?>
+      <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
+        <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+        ?>
+      </div>
+    <?php endif ?>
     <div class="ajouter-patient">
       <div class="icons">
         <div class="open">
@@ -67,7 +82,7 @@
           </div>
           <div class="input-group4">
             <div class="inputClass">
-              <h6 style="width: 35%;">Date de naissance :</h6>
+              <h6 style="width: 16%;">Date de naissance :</h6>
               <input type="text" name="date_naissance" />
             </div>
             <div class="inputClass">
@@ -82,19 +97,13 @@
           </div>
         </div>
       </div>
-      <?php if (isset($_SESSION['message'])) : ?>
-        <div class="msg">
-          <?php
-          echo $_SESSION['message'];
-          unset($_SESSION['message']);
-          ?>
-        </div>
-      <?php endif ?>
+
       <div class="arr-patients">
         <?php $results = mysqli_query($con, "SELECT * FROM patients"); ?>
         <table class="table">
           <thead>
             <tr>
+              <th scope="col">id</th>
               <th scope="col">Nom</th>
               <th scope="col">Prenom</th>
               <th scope="col">Telephone</th>
@@ -106,6 +115,7 @@
           </thead>
           <?php while ($row = mysqli_fetch_array($results)) { ?>
             <tr>
+              <td><?php echo $row['id']; ?></td>
               <td><?php echo $row['nom']; ?></td>
               <td><?php echo $row['prenom']; ?></td>
               <td><?php echo $row['Num_Tel']; ?></td>
@@ -113,13 +123,11 @@
               <td><?php echo $row['maladie']; ?></td>
               <td><?php echo $row['date_naissance']; ?></td>
               <td>
-              <a href="update.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >
-                <button class="edit_btn">Edit</button>
-              </a>
-              </td>
-              <td>
-              <a href="delete.php?del=<?php echo $row['id']; ?>" >
-                <button class="del_btn">Delete</button>
+                <a href="dashboard.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">
+                  Edit
+                </a>
+                <a href="dashboard.php?del=<?php echo $row['id']; ?>" class="btn btn-danger">
+                  Delete
                 </a>
               </td>
             </tr>

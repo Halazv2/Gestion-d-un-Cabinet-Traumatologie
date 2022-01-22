@@ -445,9 +445,12 @@ button {
   }
   .quote {
     position: absolute;
-    top: 0px;
-    padding: 30px;
+    top: 17px;
+    padding: 0px;
     transform: translate(0%, 0%);
+  }
+  .quote p{
+    font-size: 14px;
   }
   .actualites-cards {
     flex-direction: column;

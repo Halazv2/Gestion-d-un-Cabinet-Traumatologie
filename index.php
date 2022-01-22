@@ -8,8 +8,6 @@
   <!-- <link rel="stylesheet" href="./style/style.css"> -->
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
-
-  <!-- <link rel="stylesheet" href="/style/contact.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,7 +176,7 @@
         <p>Le rétablissement d’une chirurgie est la partie finale et la plus importante</p>
         <a href="#">VOIR PLUS</a>
       </div>
-      <div class="card" style="padding-left: 35px;">
+      <div class="card">
         <img src="./images/Actualités2.png" alt="Actualites">
         <h5>La cheville et les douleurs</h5>
         <p>Les chevilles supportent tout le poids du corps lorsque nous marchons, sommes</p>
@@ -265,8 +263,8 @@
       },
     });
   </script> 
+  <script src="./js/navbar.js"></script>
   <script src="https://kit.fontawesome.com/3d49ef96c0.js" crossorigin="anonymous"></script>
-  <script src="/js/navbar.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php 
-include('./connection.php');
-
+include('connection.php');
+session_start();
 
 //add_patients
 if(isset($_POST['add_submit']))
@@ -16,7 +16,8 @@ if(isset($_POST['add_submit']))
     if($result)
     {
         // echo "<script> alert('L'ajoute est bien effectuer.') </script> ";
-		$_SESSION['message'] = "Address saved"; 
+		$_SESSION['message'] = "Record has been saved"; 
+		$_SESSION['msg_type'] = "success"; 
         header("location:../dashboard.php");
     }
 	else
@@ -24,6 +25,18 @@ if(isset($_POST['add_submit']))
         header("location:../dashboard.php");
         echo "<script> alert('error') </script>";
     }
+}
+
+
+
+//delete_patients
+if(isset($_GET['del'])){
+    $id = $_GET['del'];
+    $query=("DELETE FROM patients WHERE id=$id");
+    $results=mysqli_query($con,$query)
+    or die($mysqli->error());
+    $_SESSION['message'] = "Record has been deleted"; 
+    $_SESSION['msg_type'] = "danger"; 
 }
 
 ?>
