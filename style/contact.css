@@ -14,7 +14,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .titre {
-    padding-left: 50px;
+  padding-left: 50px;
   font-weight: 700;
   font-size: 30px;
   color: var(--color-secondary);
@@ -44,18 +44,17 @@ textarea {
   padding: 20px 0;
   border-bottom: 1px solid black;
 }
-.subscribe-form-r input{
-    border: none;
-    height: 50px;
-    border-bottom: 1px solid black;
+.subscribe-form-r input {
+  border: none;
+  height: 50px;
+  border-bottom: 1px solid black;
 }
-.subscribe-form-r input::placeholder{
-    color: black;
+.subscribe-form-r input::placeholder {
+  color: black;
 }
-.botna i{
-    background-color: var(--color-secondary);
-    color: #fff;
-
+.botna i {
+  background-color: var(--color-secondary);
+  color: #fff;
 }
 .botna {
   width: 54px;
@@ -64,6 +63,12 @@ textarea {
   background: var(--color-secondary);
   padding: 0 10px;
   cursor: pointer;
+}
+.alert-success {
+  width: 62% !important;
+}
+.alert {
+  margin-bottom: 0rem !important;
 }
 @media only screen and (max-width: 376px) {
   .bg-container {
