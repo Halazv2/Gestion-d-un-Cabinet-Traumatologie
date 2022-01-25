@@ -60,8 +60,8 @@ if (isset($_GET['edit'])) {
         $maladie = $row['maladie'];
     }
 }
-
 if (isset($_POST['update'])) {
+    session_start();
     $id = $_POST['id'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];

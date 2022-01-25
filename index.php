@@ -266,7 +266,7 @@
     });
   </script> 
   <script src="https://kit.fontawesome.com/3d49ef96c0.js" crossorigin="anonymous"></script>
-  <script src="/js/navbar.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 
 </html>

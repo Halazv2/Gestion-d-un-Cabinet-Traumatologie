@@ -42,7 +42,7 @@
       <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
         <?php
         echo $_SESSION['message'];
-        unset($_SESSION['message']);
+        // unset($_SESSION['message']);
         ?>
       </div>
     <?php endif ?>
@@ -58,8 +58,8 @@
       <button class="btn btn-primary">Ajouter un patient</button>
     </div>
     <form action="./php/add.php" method="POST">
-      
-      <input type="hidden" name="id" value="<?php echo $id;?>">
+
+      <input type="hidden" name="id" value="<?php echo $id; ?>">
 
       <div class="add-patient">
         <p style="margin-left: 15%"><b>Ajouter un patinent :</b></p>
@@ -67,27 +67,27 @@
           <div class="input-group1">
             <div class="inputClass">
               <h6>Prenom:</h6>
-              <input type="text" name="prenom" " value="<?php echo $prenom; ?>" />
+              <input type="text" name="prenom" " value=" <?php echo $prenom; ?>" />
             </div>
             <div class="inputClass">
               <h6>Nom:</h6>
-              <input type="text" name="nom"  value="<?php echo $nom; ?>" />
+              <input type="text" name="nom" value="<?php echo $nom; ?>" />
             </div>
           </div>
           <div class="input-group2">
             <div class="inputClass">
               <h6>Telephone:</h6>
-              <input type="text" name="Num_Tel"  value="<?php echo $Num_Tel; ?>" />
+              <input type="text" name="Num_Tel" value="<?php echo $Num_Tel; ?>" />
             </div>
             <div class="inputClass">
               <h6>Maladie:</h6>
-              <input type="text" name="maladie"  value="<?php echo $maladie; ?>" />
+              <input type="text" name="maladie" value="<?php echo $maladie; ?>" />
             </div>
           </div>
           <div class="input-group4">
             <div class="inputClass">
               <h6 style="width: 16%;">Date de naissance :</h6>
-              <input type="text" name="date_naissance"  value="<?php echo $date_naissance; ?>" />
+              <input type="text" name="date_naissance" value="<?php echo $date_naissance; ?>" />
             </div>
             <div class="inputClass">
               <h6>Email :</h6>
@@ -95,71 +95,73 @@
             </div>
           </div>
           <div class=" input-group3">
-              <div class="btn1">
-                <?php 
-                if ($update == true):
-                  ?>
-                  <button class="btn btn-info" name="update">Update</button>
-                <?php else : ?>
+            <div class="btn1">
+              <?php
+              if ($update == true) :
+              ?>
+                <button class="btn btn-info" name="update">Update</button>
+              <?php else : ?>
                 <button class="btn btn-primary" name="add_submit">submit</button>
-                <?php endif;?>
-              </div>
+              <?php endif; ?>
             </div>
-          </div> 
+          </div>
         </div>
+      </div>
 
-        <div class="arr-patients">
-          <h3>Patients List :</h3>
-          <?php $results = mysqli_query($con, "SELECT * FROM patients"); ?>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">id</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Prenom</th>
-                <th scope="col">Telephone</th>
-                <th scope="col">Email</th>
-                <th scope="col">Maladie</th>
-                <th scope="col">Date de la visite</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <?php while ($row = mysqli_fetch_array($results)) { ?>
-              <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['nom']; ?></td>
-                <td><?php echo $row['prenom']; ?></td>
-                <td><?php echo $row['Num_Tel']; ?></td>
-                <td><?php echo $row['Email']; ?></td>
-                <td><?php echo $row['maladie']; ?></td>
-                <td><?php echo $row['date_naissance']; ?></td>
-                <td>
-                  <a href="dashboard.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">Edit</a>
-                  <a href="dashboard.php?del=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-            <?php } ?>
-          </table>
+      <div class="arr-patients">
+        <h3>Patients List :</h3>
+        <?php $results = mysqli_query($con, "SELECT * FROM patients"); ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prenom</th>
+              <th scope="col">Telephone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Maladie</th>
+              <th scope="col">Date de la visite</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <?php
+          $i = 0;
+          while ($row = mysqli_fetch_array($results)) { ?>
+            <tr>
+              <td><?php echo ++$i; ?></td>
+              <td><?php echo $row['nom']; ?></td>
+              <td><?php echo $row['prenom']; ?></td>
+              <td><?php echo $row['Num_Tel']; ?></td>
+              <td><?php echo $row['Email']; ?></td>
+              <td><?php echo $row['maladie']; ?></td>
+              <td><?php echo $row['date_naissance']; ?></td>
+              <td>
+                <a href="dashboard.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">Edit</a>
+                <a href="dashboard.php?del=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+              </td>
+            </tr>
+          <?php } ?>
+        </table>
 
-          <?php $result = mysqli_query($con, "SELECT * FROM contact"); ?>
-          <h3><br><br> Boite Mail:</h3>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Nom et Prenom</th>
-                <th scope="col">Mail address</th>
-                <th scope="col">Message</th>
-              </tr>
-            </thead>
-            <?php while ($row = mysqli_fetch_array($result)) { ?>
-              <tr>
-                <td><?php echo $row['full_name']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['message']; ?></td>
-              </tr>
-            <?php } ?>
-          </table>
-        </div>
+        <?php $result = mysqli_query($con, "SELECT * FROM contact"); ?>
+        <h3><br><br> Boite Mail:</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nom et Prenom</th>
+              <th scope="col">Mail address</th>
+              <th scope="col">Message</th>
+            </tr>
+          </thead>
+          <?php while ($row = mysqli_fetch_array($result)) { ?>
+            <tr>
+              <td><?php echo $row['full_name']; ?></td>
+              <td><?php echo $row['email']; ?></td>
+              <td><?php echo $row['message']; ?></td>
+            </tr>
+          <?php } ?>
+        </table>
+      </div>
     </form>
   </div>
   <script src="./js/dashboard.js"></script>
